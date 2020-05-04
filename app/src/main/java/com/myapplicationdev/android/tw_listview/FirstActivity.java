@@ -15,16 +15,14 @@ public class FirstActivity extends AppCompatActivity {
 
     ListView lv;
     ArrayList<String> al;
-    ArrayAdapter<String> aa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lv = (ListView)this.findViewById(R.id.lv);
+        lv = (ListView) findViewById(R.id.lv);
 
-        //V2
         al = new ArrayList<String>();
         al.add("Year 1");
         al.add("Year 2");
