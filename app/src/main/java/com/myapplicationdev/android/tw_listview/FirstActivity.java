@@ -24,7 +24,7 @@ public class FirstActivity extends AppCompatActivity {
 
         lv = (ListView)this.findViewById(R.id.lv);
 
-
+        //V2
         al = new ArrayList<String>();
         al.add("Year 1");
         al.add("Year 2");
