@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -21,6 +22,8 @@ public class FirstActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        lv = (ListView)this.findViewById(R.id.lv);
+
 
         al = new ArrayList<String>();
         al.add("Year 1");
@@ -31,7 +34,7 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getBaseContext(), SecondActivity.class);
-                ArrayList currentPosition = al.get(position);
+                intent.putExtra("year", al.get(i));
                 startActivity(intent);
 
             }
