@@ -11,13 +11,12 @@ public class SecondActivity extends AppCompatActivity {
     ListView lv;
     TextView tvYear;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        lv = (ListView) this.findViewById(R.id.lvModules);
+        lv = findViewById(R.id.lvModules);
         tvYear = (TextView) findViewById(R.id.tvYear);
 
         Intent i = getIntent();
