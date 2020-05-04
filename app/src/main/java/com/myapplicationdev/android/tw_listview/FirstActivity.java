@@ -24,13 +24,12 @@ public class FirstActivity extends AppCompatActivity {
 
         lv = (ListView)this.findViewById(R.id.lv);
 
-
         al = new ArrayList<String>();
         al.add("Year 1");
         al.add("Year 2");
         al.add("Year 3");
 
-        aa = new ArrayAdapter(this, R.layout.activity_main, al);
+        aa = new ArrayAdapter(this, android.R.layout.simple_list_item_1, al);
         lv.setAdapter(aa);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
