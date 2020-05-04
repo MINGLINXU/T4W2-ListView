@@ -3,6 +3,7 @@ package com.myapplicationdev.android.tw_listview;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -33,6 +34,7 @@ public class FirstActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getBaseContext(), SecondActivity.class);
                 intent.putExtra("year", al.get(i));
+                Log.i("TAG", "onItemClick: lmao " + i);
                 startActivity(intent);
 
             }
